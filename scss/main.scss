@@ -10,10 +10,6 @@ html, body {margin: 0;height: 100%;min-height: 100%;}
 .header-image {
     width: 100%;
     position: relative;
-    height: 300px;
-    background-position: 50%;
-    background-repeat: no-repeat;
-    background-size: cover;
 
     .logo {
         position: absolute;
@@ -25,6 +21,12 @@ html, body {margin: 0;height: 100%;min-height: 100%;}
         img {
             max-width: 258px;
         }
+    }
+
+    > img, video {
+        width: 100%;
+        object-fit: cover;
+        height: 300px;
     }
 }
 
@@ -304,7 +306,10 @@ h1 {
 
 @media (max-width: 768px) {
     .header-image {
-        height: 250px;
+        
+        > img, video {
+            height: 250px;
+        } 
     }
 
     
